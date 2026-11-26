@@ -1,0 +1,930 @@
+{
+  "info": {
+    "name": "EventosApi - CRUD (rode a coleção de cima para baixo)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5180"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Organizadores",
+      "item": [
+        {
+          "name": "Listar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Organizadores",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Organizadores"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Buscar por Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Organizadores/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Organizadores",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Painel (resumo) do organizador",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Organizadores/1/Resumo",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Organizadores",
+                "1",
+                "Resumo"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Eventos do organizador",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Organizadores/1/Eventos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Organizadores",
+                "1",
+                "Eventos"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Criar (vira Id 3)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Organizadores",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Organizadores"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Paula Mendes\",\n  \"email\": \"paula@eventos.com\",\n  \"telefone\": \"(11) 95555-1234\",\n  \"empresa\": \"PM Cerimonial\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Atualizar Id 3",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Organizadores/3",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Organizadores",
+                "3"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Paula Mendes Costa\",\n  \"email\": \"paula@eventos.com\",\n  \"telefone\": \"(11) 95555-9999\",\n  \"empresa\": \"PM Cerimonial\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Remover Id 3",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Organizadores/3",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Organizadores",
+                "3"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Locais",
+      "item": [
+        {
+          "name": "Listar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Locais",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Locais"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Buscar por Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Locais/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Locais",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Criar (vira Id 3)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Locais",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Locais"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Espaço Vila Madalena\",\n  \"endereco\": \"Rua Harmonia, 300\",\n  \"cidade\": \"São Paulo\",\n  \"capacidade\": 120\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Atualizar Id 3",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Locais/3",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Locais",
+                "3"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Espaço Vila Madalena\",\n  \"endereco\": \"Rua Harmonia, 310\",\n  \"cidade\": \"São Paulo\",\n  \"capacidade\": 150\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Remover Id 3",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Locais/3",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Locais",
+                "3"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Participantes",
+      "item": [
+        {
+          "name": "Listar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Participantes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Participantes"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Buscar por Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Participantes/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Participantes",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Criar (vira Id 5)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Participantes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Participantes"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Elisa Rocha\",\n  \"email\": \"elisa@email.com\",\n  \"telefone\": \"(11) 90000-0005\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Atualizar Id 5",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Participantes/5",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Participantes",
+                "5"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Elisa Rocha Lima\",\n  \"email\": \"elisa@email.com\",\n  \"telefone\": \"(11) 90000-0055\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Remover Id 5",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Participantes/5",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Participantes",
+                "5"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Eventos",
+      "item": [
+        {
+          "name": "Listar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Filtrar (Publicado, organizador 1)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos?status=Publicado&organizadorId=1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "Publicado"
+                },
+                {
+                  "key": "organizadorId",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Buscar por Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Inscritos do evento 1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos/1/Inscricoes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos",
+                "1",
+                "Inscricoes"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Resumo do evento 1 (vagas/receita)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos/1/Resumo",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos",
+                "1",
+                "Resumo"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Criar (vira Id 4, nasce em Rascunho)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"Meetup de Dados\",\n  \"descricao\": \"Encontro mensal da comunidade de dados.\",\n  \"dataInicio\": \"2027-06-10T19:00:00Z\",\n  \"dataFim\": \"2027-06-10T22:00:00Z\",\n  \"preco\": 25.5,\n  \"capacidadeMaxima\": 100,\n  \"organizadorId\": 1,\n  \"localId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Atualizar Id 4",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos/4",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos",
+                "4"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"Meetup de Dados e IA\",\n  \"descricao\": \"Encontro mensal da comunidade de dados.\",\n  \"dataInicio\": \"2027-06-10T19:00:00Z\",\n  \"dataFim\": \"2027-06-10T22:00:00Z\",\n  \"preco\": 25.5,\n  \"capacidadeMaxima\": 120,\n  \"organizadorId\": 1,\n  \"localId\": 1,\n  \"status\": \"Rascunho\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Publicar Id 4",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos/4/Publicar",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos",
+                "4",
+                "Publicar"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Cancelar Id 4",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos/4/Cancelar",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos",
+                "4",
+                "Cancelar"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Remover Id 4",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos/4",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos",
+                "4"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Inscricoes",
+      "item": [
+        {
+          "name": "Listar todas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Inscricoes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Inscricoes"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Filtrar por evento",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Inscricoes?eventoId=1&status=Confirmada",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Inscricoes"
+              ],
+              "query": [
+                {
+                  "key": "eventoId",
+                  "value": "1"
+                },
+                {
+                  "key": "status",
+                  "value": "Confirmada"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Buscar por Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Inscricoes/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Inscricoes",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Inscrever participante 4 no evento 1 (vira Id 5)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Inscricoes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Inscricoes"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"eventoId\": 1,\n  \"participanteId\": 4\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Check-in (presença) Id 5",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Inscricoes/5",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Inscricoes",
+                "5"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"Confirmada\",\n  \"presente\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Remover Id 5",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Inscricoes/5",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Inscricoes",
+                "5"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "6. Erros esperados",
+      "item": [
+        {
+          "name": "Evento inexistente (404)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos/999",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos",
+                "999"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Capacidade maior que o local (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"Meetup de Dados\",\n  \"descricao\": \"Encontro mensal da comunidade de dados.\",\n  \"dataInicio\": \"2027-06-10T19:00:00Z\",\n  \"dataFim\": \"2027-06-10T22:00:00Z\",\n  \"preco\": 25.5,\n  \"capacidadeMaxima\": 900,\n  \"organizadorId\": 1,\n  \"localId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Data fim antes do início (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Eventos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Eventos"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"Meetup de Dados\",\n  \"descricao\": \"Encontro mensal da comunidade de dados.\",\n  \"dataInicio\": \"2027-06-10T19:00:00Z\",\n  \"dataFim\": \"2027-06-10T10:00:00Z\",\n  \"preco\": 25.5,\n  \"capacidadeMaxima\": 100,\n  \"organizadorId\": 1,\n  \"localId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Inscrição em evento Rascunho (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Inscricoes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Inscricoes"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"eventoId\": 3,\n  \"participanteId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Inscrição duplicada (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/Inscricoes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Inscricoes"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"eventoId\": 1,\n  \"participanteId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Remover organizador com eventos (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Organizadores/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Organizadores",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Remover local com eventos (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/Locais/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "Locais",
+                "1"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
